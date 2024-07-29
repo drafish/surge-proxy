@@ -1,14 +1,7 @@
-[[headers]]
-  for = "/*"
-  [headers.values]
-      Access-Control-Allow-Origin = "*"
-      Access-Control-Allow-Methods = "*"
-      Access-Control-Allow-Headers = "*"
 [[redirects]]
   from = "/surge-proxy/*"
   to = "https://surge.surge.sh/:splat"
   host = "surge.surge.sh"
   status = 200
   force = true
-  headers = {Access-Control-Allow-Origin = "*", Access-Control-Allow-Methods = "*", Access-Control-Allow-Headers = "*"}
 
