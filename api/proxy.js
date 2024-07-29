@@ -1,7 +1,12 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = (req, res) => {
-  const target = 'https://surge.surge.sh';
+  let target = '';
+
+  // 你可以在此处设置你的反向代理规则
+  if (req.url.includes('/api')) {
+    target = 'https://surge.surge.sh';
+  }
 
   // 创建代理对象并传入参数
   createProxyMiddleware({
