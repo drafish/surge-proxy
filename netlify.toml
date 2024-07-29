@@ -4,6 +4,7 @@
   host = "surge.surge.sh"
   status = 200
   force = true
+  headers = {Access-Control-Allow-Origin = "*"}
 [[headers]]
   for = "/surge-proxy/*"
     [headers.values]
