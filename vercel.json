@@ -2,7 +2,12 @@
   "rewrites": [
     {
       "source": "/:path*",
-      "destination": "https://surge.surge.sh/:path*",
+      "destination": "https://surge.surge.sh/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/:path*",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
