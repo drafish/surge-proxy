@@ -4,10 +4,10 @@
   host = "surge.surge.sh"
   status = 200
   force = true
-  headers = {X-From = "Netlify"}
+  headers = {Access-Control-Allow-Origin = "*", Access-Control-Allow-Methods = "*", Access-Control-Allow-Headers = "*"}
 [[headers]]
   for = "*"
   [headers.values]
       Access-Control-Allow-Origin = "*"
-      Access-Control-Allow-Methods = "GET,POST,OPTIONS"
-      Access-Control-Allow-Headers = "X-Requested-With"
+      Access-Control-Allow-Methods = "*"
+      Access-Control-Allow-Headers = "*"
