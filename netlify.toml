@@ -4,9 +4,4 @@
   host = "surge.surge.sh"
   status = 200
   force = true
-  headers = {Access-Control-Allow-Origin = "*"}
-[[headers]]
-  for = "/surge-proxy/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE"
+  headers = {Access-Control-Allow-Origin = "*", Access-Control-Allow-Methods = "GET, POST, PUT, DELETE", Access-Control-Allow-Headers = "Content-Type"}
