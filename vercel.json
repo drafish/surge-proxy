@@ -1,19 +1,10 @@
 {
+  "functions": {
+    "proxy.js": {
+      "runtime": "nodejs14.x"
+    }
+  },
   "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "https://surge.surge.sh/:path*"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Credentials", "value": "true" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "*" },
-        { "key": "Access-Control-Allow-Headers", "value": "*" }
-      ]
-    }
+    { "source": "/(.*)", "destination": "/proxy.js" }
   ]
 }
